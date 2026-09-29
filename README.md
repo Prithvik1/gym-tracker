@@ -11,10 +11,16 @@ docker compose up -d                # Postgres
 cd backend && cp .env.example .env  # first time only
 npm install && npm run start        # http://localhost:3000
 
-cd mobile && flutter run -d chrome  # or -d <device>
+cd web && cp .env.example .env      # first time only
+npm install && npm run dev          # http://localhost:5173
 ```
 
-## Next (build-order steps 2+)
+`web/` is the React app for the browser. A mobile app (iOS/Android) is
+planned once the web app is feature-complete.
 
-Exercise library + level-specific home pages, workout logging, split builder,
-meal logging + AI parsing, calorie targets — see spec section 7.
+## Next: deploy + remaining features
+
+See **[ROADMAP.md](ROADMAP.md)** — the full build & deploy plan: how to ship
+this end-to-end (Railway + Vercel, Docker, CI) and every feature still to build
+(goal/stats, meal logging + AI calories, calorie targets, split builder), each
+with exact files, entities, and endpoints.

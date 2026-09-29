@@ -27,7 +27,10 @@ export class UsersService {
     return this.usersRepository.save(user);
   }
 
-  async setTrainingLevel(id: string, trainingLevel: TrainingLevel): Promise<User> {
+  async setTrainingLevel(
+    id: string,
+    trainingLevel: TrainingLevel,
+  ): Promise<User> {
     const user = await this.findById(id);
     if (!user) {
       throw new NotFoundException('User not found');

@@ -43,9 +43,13 @@ describe('AuthService', () => {
 
     it('hashes the password before storing the user', async () => {
       usersService.findByEmail.mockResolvedValue(null);
-      usersService.create.mockImplementation(
-        async (email, passwordHash, name) =>
-          ({ id: '1', email, password_hash: passwordHash, name }) as User,
+      usersService.create.mockImplementation((email, passwordHash, name) =>
+        Promise.resolve({
+          id: '1',
+          email,
+          password_hash: passwordHash,
+          name,
+        } as User),
       );
 
       const result = await authService.signup(
