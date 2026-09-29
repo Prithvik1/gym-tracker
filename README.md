@@ -7,7 +7,7 @@ estimates and to suggest workouts. Built with **NestJS**, **PostgreSQL**, and
 
 **Live demo:** _coming soon — deploying to Railway (API) + Vercel (web)_
 
-📋 [Build & deploy roadmap](ROADMAP.md) · 📄 [Phase 1 spec](gym-progress-tracker-phase-1-spec.md)
+📄 [Phase 1 spec](gym-progress-tracker-phase-1-spec.md)
 
 ## Tech stack
 
@@ -27,7 +27,7 @@ estimates and to suggest workouts. Built with **NestJS**, **PostgreSQL**, and
 - Training insights — 7-day muscle-group volume, imbalance & split detection
 - AI coach — suggests today's workout from your level, goal, and recent training
 
-**In progress** (see [ROADMAP.md](ROADMAP.md))
+**In progress**
 
 - Goal & body-stats editing
 - Meal logging + AI calorie/macro estimation
@@ -54,19 +54,4 @@ npm install && npm run dev                 # http://localhost:5173
 backend/            NestJS API (auth, users, exercises, workouts, coach)
 web/                React app (Vite)
 docker-compose.yml  Local Postgres
-ROADMAP.md          Build & deploy plan
-```
-
-## Development workflow
-
-`main` is always deployable — CI (lint + tests + build) runs on every pull
-request, and merges to `main` auto-deploy (API → Railway, web → Vercel).
-
-One feature per branch:
-
-```bash
-git checkout -b feature/<name>   # branch off main
-# build the feature, commit as you go
-git push -u origin feature/<name>
-# open a PR → CI runs → review → merge to main
 ```
