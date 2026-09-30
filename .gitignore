@@ -2,3 +2,6 @@
 
 # Personal build/deploy notes — not for the public repo
 ROADMAP.md
+
+# Playwright MCP test artifacts (screenshots, snapshots, console logs)
+.playwright-mcp/
