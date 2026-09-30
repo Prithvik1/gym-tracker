@@ -1,5 +1,7 @@
 # Gym Progress Tracker
 
+[![CI](https://github.com/Prithvik1/gym-tracker/actions/workflows/ci.yml/badge.svg)](https://github.com/Prithvik1/gym-tracker/actions/workflows/ci.yml)
+
 A full-stack fitness tracker that personalizes training by experience level,
 logs workouts in detail, and uses AI to turn free-text meals into calorie
 estimates and to suggest workouts. Built with **NestJS**, **PostgreSQL**, and
