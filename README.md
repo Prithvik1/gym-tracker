@@ -7,7 +7,7 @@ logs workouts in detail, and uses AI to turn free-text meals into calorie
 estimates and to suggest workouts. Built with **NestJS**, **PostgreSQL**, and
 **React**.
 
-**Live demo:** https://gym-tracker-jade-rho.vercel.app
+**Live demo:** https://gym-tracker-red-one.vercel.app
 
 📄 [Phase 1 spec](gym-progress-tracker-phase-1-spec.md)
 
