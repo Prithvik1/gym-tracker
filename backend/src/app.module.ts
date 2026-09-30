@@ -26,6 +26,14 @@ import { WorkoutsModule } from './workouts/workouts.module';
         username: configService.get('DB_USERNAME', 'gymtracker'),
         password: configService.get('DB_PASSWORD', 'gymtracker'),
         database: configService.get('DB_NAME', 'gymtracker'),
+        // Managed Postgres (Neon, Render external) requires SSL; local/Docker
+        // don't. ponytail: rejectUnauthorized:false trusts the host cert
+        // without CA pinning — standard for these providers; pin a CA if ever
+        // security-critical.
+        ssl:
+          configService.get('DB_SSL') === 'true'
+            ? { rejectUnauthorized: false }
+            : false,
         entities: [User, Exercise, WorkoutLog, WorkoutLogEntry],
         // ponytail: synchronize auto-generates schema from entities for fast
         // iteration; switch to real migrations before this touches prod data.
