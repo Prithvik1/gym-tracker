@@ -7,7 +7,7 @@ logs workouts in detail, and uses AI to turn free-text meals into calorie
 estimates and to suggest workouts. Built with **NestJS**, **PostgreSQL**, and
 **React**.
 
-**Live demo:** _coming soon — deploying to Railway (API) + Vercel (web)_
+**Live demo:** https://gym-tracker-jade-rho.vercel.app
 
 📄 [Phase 1 spec](gym-progress-tracker-phase-1-spec.md)
 
@@ -16,7 +16,7 @@ estimates and to suggest workouts. Built with **NestJS**, **PostgreSQL**, and
 - **Backend:** NestJS (TypeScript), TypeORM, PostgreSQL, JWT auth (bcrypt)
 - **Frontend:** React + Vite, Tailwind CSS, shadcn/ui
 - **AI:** Google Gemini (`gemini-2.5-flash`) — workout suggestions & meal calorie parsing
-- **Infra:** Docker, GitHub Actions CI, Railway (API + DB), Vercel (web)
+- **Infra:** Docker, GitHub Actions CI, Render (API), Neon (Postgres), Vercel (web)
 
 ## Features
 
